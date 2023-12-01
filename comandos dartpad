@@ -1,0 +1,164 @@
+import 'package:intl/intl.dart';
+void main() {
+  /*
+  //Laços de repetição - while
+  var numero = 0;
+  while (numero <= 8) {
+  print(numero);
+  numero++;
+  //numero = numero +1;
+  }
+  */
+
+
+  /*
+  //cesta basica em formato de lista com o "for (var n in ____)"
+  var basico = ['🍚 arroz','🍛 feijão','🍝 macarrão','🥩 carne','🥚 ovo','🍑 frutas'];
+ // print(basico);
+  print("Cesta básica 😎");
+  for (var n in basico){
+   print(n);
+  }
+  */
+
+
+  /*
+  //lista(arrays)
+
+  var frutas = ['morius🍓','uva🍇','ueaiaorpa🐻','UNCAI🐟','aerira🕷','baoré🩰','seraphine👹'];
+  var num1 = [1,2,3,4,5,6,7,8,9];
+  frutas.add('the rise of gru👽');
+  frutas.removeAt(6);
+
+  print(frutas);
+  */
+
+
+  //desafio da permissão pra entrar na balada top
+
+/*
+  String nome = 'Henrique';
+  var idade = 16;
+  var temAutorizacao = false;
+  if (idade >=18 || temAutorizacao) {
+    print('$nome tem autorização!😎');
+  }else{
+    print('$nome não tem autorização!🤓👆');
+  }
+}
+  */
+
+
+
+  //Operadores condicionais (if->se/else->senão)
+
+/*
+String nome = "Henrique";
+  String sobreNome = "Rabadon";
+  var nota1 = 80.0;
+  var nota2 = 70.0;
+  var nota3 = 40.0;
+  var nota4 = 60.0;
+  var media = (nota1 + nota2 + nota3 + nota4)/4;
+  print ('A média das notas de $nome $sobreNome é: $media');
+  if (media >= 60) {
+
+  print('$nome foi aprovado!🥵');
+
+  }else if (media < 40){
+    
+  
+  print('$nome foi reprovado!😎');
+  }else{
+  print('$nome ficou com recuperação!👽');
+  }
+  }
+  */
+
+
+
+ /*
+  //Operadores Condicionais (if/else)
+  int idade = 16;
+  if (idade >= 18) {
+   print('Maior de idade');
+} else {
+  print('Menor de idade');
+}
+*/
+
+  /*
+  //DataTime declaração e formação de datas
+  DateTime agora = DateTime.now();
+  DateFormat formato = DateFormat('dd-MM-yyyy');
+  String dataFormatada = formato.format(agora);
+  print ('Data: $dataFormatada');
+  */
+
+
+  /*
+  dynamic qualquerCoisa = 'Vrau é oque? Trabson?';
+
+  qualquerCoisa = 'Sapo ta me trollando ao vivo';
+
+  print ('Dynamic aceita todos os tipos => $qualquerCoisa');
+  */
+
+
+  /*
+  //variáveis do tipo bool (usado para verdadeiro ou falso)
+  bool aprovado = true;
+
+  bool casado = false;
+
+  print ('O aluno foi aprovado? $aprovado');
+
+  print ('É casado? $casado');
+  */
+
+
+  /*
+  String nome = "Henrique";
+  String sobreNome = "Rabadon";
+  var nota1 = 80.0;
+  var nota2 = 70.0;
+  var nota3 = 40.0;
+  var nota4 = 60.0;
+  var media = (nota1 + nota2 + nota3 + nota4)/4;
+  print ('A média das notas de $nome $sobreNome é: $media');
+  */
+
+
+
+  /*
+  //variáveis double
+  double salario = 10000.80;
+  var aumento = 20;
+  var novoSalario = (salario * aumento) /100;
+  var salarioReajustado = salario + novoSalario;
+  print('O salário é: $salario');
+  print('O almento foi de $novoSalario');
+  print('O salario reajustado é de $salarioReajustado');
+  */
+
+
+
+  /*
+  //variáveis inteiro
+  int num1 = 10;
+  int num2 = 50;
+  int num3 = 2;
+  var resultado = (num1 + num2) / num3;
+  print('O numero informado é $resultado');
+  */
+
+
+
+  /*
+  //variáveis do tipo String
+  String nome = "Henrique";
+  String sobrenome = "Rabadon";
+  print("O nome completo é $nome $sobrenome");
+  */
+
+}
