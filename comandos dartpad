@@ -1,5 +1,63 @@
 import 'package:intl/intl.dart';
 void main() {
+
+var produto = funcaoAnonimo();
+print('Lista de rodutos mais vendidos do planeta Terra🗣️🗣️🗣️🔥🔥🔥');
+print('-----------------------------------------------');
+for (var n in produto){
+  print(n);
+}
+
+}
+
+var funcaoAnonimo = () {
+    return ['formiga leão 🐜','the rise of gru 👽','besouro torapeira 🐞','guinu do gelo 🐂'];
+};
+
+   
+
+
+  /*
+  print(funcaoAnonimo());
+}
+
+var funcaoAnonimo = () {
+    return 'Texto da função anônima';
+};
+*/
+
+  /*
+print("A área do quadrado é ${areaQuadrado(l1: 99, l2: 79)}");
+}
+
+double areaQuadrado({required double l1, required double l2}) => l1 * l2;
+*/
+
+  /*
+print("Dados Cliente ==> : ${dadosCliente('Henrique Rabadon','(45) 9998 6798')}");
+}
+
+String dadosCliente([String? nome, String? telefone]){
+  nome ??= 'Nome não informado';
+  telefone ??= 'Telefone não informado';
+  return 'Nome: $nome. Telefone: $telefone';
+}
+*/
+
+  /*
+    print("A soma é ${multiplicar(n1: 30,n2: 10)}");
+    }
+*/
+
+  /*
+print("Resultado: ${multiplicar(n1: 30,n2: 10)}");
+    }
+  
+double multiplicar({required double n1, required double n2}) {
+  return n1 * n2;
+}
+*/
+
   /*
   //Laços de repetição - while
   var numero = 0;
