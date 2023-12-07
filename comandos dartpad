@@ -220,3 +220,116 @@ String nome = "Henrique";
   */
 
 }
+
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+class Jogo extends StatefulWidget {
+  const Jogo({Key? key}) : super(key: key);
+
+  @override
+  State<Jogo> createState() => _JogoState();
+}
+
+class _JogoState extends State<Jogo> {
+  var imageApp = const AssetImage('assets/images/padrao.jpeg');
+  var mensagem = '';
+
+  void mostrarMensagem(String escolhaUsuario) {
+    print(escolhaUsuario);
+    {
+      var opcoes = ["pedra", "papel", "tesoura"];
+      var numero = Random().nextInt(3);
+      var escolhaApp = opcoes[numero];
+
+      switch (escolhaApp) {
+        case "pedra":
+          setState(() {
+            imageApp = const AssetImage("assets/images/pedra.jpeg");
+          });
+          break;
+          (escolhaUsuario == "pedra" && escolhaApp == "tesoura") ||
+              (escolhaUsuario == "tesoura" && escolhaApp == "papel") ||
+              (escolhaUsuario == "papel" && escolhaApp == "pedra");
+        case "tesoura":
+          setState(() {
+            imageApp = const AssetImage("assets/images/tesoura.jpeg");
+          });
+          break;
+      }
+
+      if ((escolhaUsuario == "pedra" && escolhaApp == "tesoura") ||
+          (escolhaUsuario == "tesoura" && escolhaApp == "papel") ||
+          (escolhaUsuario == "papel" && escolhaApp == "pedra")) {
+        setState(() {
+          mensagem = "Você ganhou :)";
+        });
+      } else if ((escolhaUsuario == "tesoura" && escolhaApp == "pedra") ||
+          (escolhaUsuario == "papel" && escolhaApp == "tesoura") ||
+          (escolhaUsuario == "pedra" && escolhaApp == "papel")) {
+        setState(() {
+          mensagem = "Você perdeu :(";
+        });
+      } else {
+        setState(() {
+          mensagem = "Empatamos -_-";
+        });
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('JoKenPo'),
+      ),
+      body: Column(
+        children: [
+          Text('Escolha uma opção'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              /*
+              Image.asset(
+                'assets/images/padrao.jpeg',
+                height: 100,
+              ),*/
+              GestureDetector(
+                child: Image.asset(
+                  'assets/images/pedra.jpeg',
+                  height: 100,
+                ),
+                onTap: () {
+                  mostrarMensagem('pedra');
+                },
+              ),
+              GestureDetector(
+                child: Image.asset(
+                  'assets/images/papel.jpeg',
+                  height: 100,
+                ),
+                onTap: () {
+                  mostrarMensagem('papel');
+                },
+              ),
+              GestureDetector(
+                child: Image.asset(
+                  'assets/images/tesoura.jpeg',
+                  height: 100,
+                ),
+                onTap: () {
+                  mostrarMensagem('tesoura');
+                },
+              ),
+            ],
+          ),
+          Text('Escolha do App'),
+          Image(image: imageApp),
+          Text(mensagem),
+        ],
+      ),
+    );
+  }
+}
